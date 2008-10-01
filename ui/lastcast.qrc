@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="ui" >
+    <file>img/bomb.png</file>
+    <file>img/control_play_blue.png</file>
+    <file>img/control_stop_blue.png</file>
+    <file>img/heart.png</file>
+    <file>img/lastcast.png</file>
+    <file>img/music.png</file>
+    <file>img/sound.png</file>
+    <file>img/stop.png</file>
+    <file>img/transmit.png</file>
+    <file>img/transmit_add.png</file>
+    <file>img/transmit_blue.png</file>
+    <file>img/transmit_delete.png</file>
+    <file>img/transmit_edit.png</file>
+    <file>img/wrench.png</file>
+  </qresource>
+</RCC>

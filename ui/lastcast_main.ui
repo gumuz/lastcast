@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
+ <class>LastcastMainWindow</class>
+ <widget class="QMainWindow" name="LastcastMainWindow" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
   </property>
   <property name="windowIcon" >
    <iconset resource="lastcast.qrc" >
-    <normaloff>:/ui/resources/ui/transmit_blue.png</normaloff>:/ui/resources/ui/transmit_blue.png</iconset>
+    <normaloff>:/ui/img/transmit_blue.png</normaloff>:/ui/img/transmit_blue.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget" >
    <widget class="QGroupBox" name="groupBox" >
@@ -57,7 +57,7 @@
       <string/>
      </property>
      <property name="pixmap" >
-      <pixmap resource="lastcast.qrc" >:/ui/resources/ui/lastcast.png</pixmap>
+      <pixmap resource="lastcast.qrc" >:/ui/img/lastcast.png</pixmap>
      </property>
     </widget>
    </widget>
@@ -112,7 +112,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/control_play_blue.png</normaloff>:/ui/resources/ui/control_play_blue.png</iconset>
+       <normaloff>:/ui/img/control_play_blue.png</normaloff>:/ui/img/control_play_blue.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -144,7 +144,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/control_stop_blue.png</normaloff>:/ui/resources/ui/control_stop_blue.png</iconset>
+       <normaloff>:/ui/img/control_stop_blue.png</normaloff>:/ui/img/control_stop_blue.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -173,7 +173,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
+       <normaloff>:/ui/img/transmit.png</normaloff>:/ui/img/transmit.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -205,7 +205,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/bomb.png</normaloff>:/ui/resources/ui/bomb.png</iconset>
+       <normaloff>:/ui/img/bomb.png</normaloff>:/ui/img/bomb.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -237,7 +237,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/stop.png</normaloff>:/ui/resources/ui/stop.png</iconset>
+       <normaloff>:/ui/img/stop.png</normaloff>:/ui/img/stop.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -269,7 +269,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/heart.png</normaloff>:/ui/resources/ui/heart.png</iconset>
+       <normaloff>:/ui/img/heart.png</normaloff>:/ui/img/heart.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -301,7 +301,7 @@
      </property>
      <property name="icon" >
       <iconset resource="lastcast.qrc" >
-       <normaloff>:/ui/resources/ui/wrench.png</normaloff>:/ui/resources/ui/wrench.png</iconset>
+       <normaloff>:/ui/img/wrench.png</normaloff>:/ui/img/wrench.png</iconset>
      </property>
      <property name="iconSize" >
       <size>
@@ -355,7 +355,7 @@
      <string/>
     </property>
     <property name="pixmap" >
-     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/music.png</pixmap>
+     <pixmap resource="lastcast.qrc" >:/ui/img/music.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_3" >
@@ -374,7 +374,7 @@
      <string/>
     </property>
     <property name="pixmap" >
-     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/sound.png</pixmap>
+     <pixmap resource="lastcast.qrc" >:/ui/img/sound.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_2" >
@@ -393,7 +393,7 @@
      <string/>
     </property>
     <property name="pixmap" >
-     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/transmit.png</pixmap>
+     <pixmap resource="lastcast.qrc" >:/ui/img/transmit.png</pixmap>
     </property>
    </widget>
    <widget class="QLineEdit" name="editStation" >
@@ -423,7 +423,7 @@
   </widget>
   <action name="actionPlay" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/control_play_blue.png</normaloff>:/ui/resources/ui/control_play_blue.png</iconset>
    </property>
    <property name="text" >
@@ -432,7 +432,7 @@
   </action>
   <action name="actionStop" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/control_stop_blue.png</normaloff>:/ui/resources/ui/control_stop_blue.png</iconset>
    </property>
    <property name="text" >
@@ -441,7 +441,7 @@
   </action>
   <action name="actionRecord" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/stop.png</normaloff>:/ui/resources/ui/stop.png</iconset>
    </property>
    <property name="text" >
@@ -450,7 +450,7 @@
   </action>
   <action name="actionLove" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/heart.png</normaloff>:/ui/resources/ui/heart.png</iconset>
    </property>
    <property name="text" >
@@ -459,7 +459,7 @@
   </action>
   <action name="actionBan" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/bomb.png</normaloff>:/ui/resources/ui/bomb.png</iconset>
    </property>
    <property name="text" >
@@ -468,7 +468,7 @@
   </action>
   <action name="actionStations" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
    </property>
    <property name="text" >
@@ -477,7 +477,7 @@
   </action>
   <action name="actionSettings" >
    <property name="icon" >
-    <iconset resource="lastcast.qrc" >
+    <iconset>
      <normaloff>:/ui/resources/ui/wrench.png</normaloff>:/ui/resources/ui/wrench.png</iconset>
    </property>
    <property name="text" >
@@ -485,7 +485,6 @@
    </property>
   </action>
  </widget>
- <includes/>
  <resources>
   <include location="lastcast.qrc" />
  </resources>
@@ -493,7 +492,7 @@
   <connection>
    <sender>btnPlay</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>play()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -509,7 +508,7 @@
   <connection>
    <sender>btnStop</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>stop()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -525,7 +524,7 @@
   <connection>
    <sender>btnRecord</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>record()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -541,7 +540,7 @@
   <connection>
    <sender>btnLove</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>love()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -557,7 +556,7 @@
   <connection>
    <sender>btnBan</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>ban()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -573,7 +572,7 @@
   <connection>
    <sender>btnStations</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>showStations()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -589,7 +588,7 @@
   <connection>
    <sender>btnSettings</sender>
    <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
+   <receiver>LastcastMainWindow</receiver>
    <slot>showSettings()</slot>
    <hints>
     <hint type="sourcelabel" >

@@ -1,6 +1,6 @@
 <ui version="4.0" >
- <class>StationsDialog</class>
- <widget class="QDialog" name="StationsDialog" >
+ <class>LastcastStationsDialog</class>
+ <widget class="QDialog" name="LastcastStationsDialog" >
   <property name="geometry" >
    <rect>
     <x>0</x>
@@ -14,7 +14,7 @@
   </property>
   <property name="windowIcon" >
    <iconset resource="lastcast.qrc" >
-    <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
+    <normaloff>:/ui/img/transmit.png</normaloff>:/ui/img/transmit.png</iconset>
   </property>
   <property name="modal" >
    <bool>true</bool>
@@ -68,7 +68,7 @@
    </property>
    <property name="icon" >
     <iconset resource="lastcast.qrc" >
-     <normaloff>:/ui/resources/ui/transmit_edit.png</normaloff>:/ui/resources/ui/transmit_edit.png</iconset>
+     <normaloff>:/ui/img/transmit_edit.png</normaloff>:/ui/img/transmit_edit.png</iconset>
    </property>
    <property name="toolButtonStyle" >
     <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -91,7 +91,7 @@
    </property>
    <property name="icon" >
     <iconset resource="lastcast.qrc" >
-     <normaloff>:/ui/resources/ui/transmit_delete.png</normaloff>:/ui/resources/ui/transmit_delete.png</iconset>
+     <normaloff>:/ui/img/transmit_delete.png</normaloff>:/ui/img/transmit_delete.png</iconset>
    </property>
    <property name="toolButtonStyle" >
     <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -114,7 +114,7 @@
    </property>
    <property name="icon" >
     <iconset resource="lastcast.qrc" >
-     <normaloff>:/ui/resources/ui/transmit_add.png</normaloff>:/ui/resources/ui/transmit_add.png</iconset>
+     <normaloff>:/ui/img/transmit_add.png</normaloff>:/ui/img/transmit_add.png</iconset>
    </property>
    <property name="toolButtonStyle" >
     <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -144,7 +144,7 @@
   <connection>
    <sender>btnStationAdd</sender>
    <signal>clicked()</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>addStation()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -160,7 +160,7 @@
   <connection>
    <sender>btnStationEdit</sender>
    <signal>clicked()</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>editStation()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -176,7 +176,7 @@
   <connection>
    <sender>btnStationDelete</sender>
    <signal>clicked()</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>deleteStation()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -192,7 +192,7 @@
   <connection>
    <sender>btnClose</sender>
    <signal>clicked()</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -208,7 +208,7 @@
   <connection>
    <sender>treeStations</sender>
    <signal>itemSelectionChanged()</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>changeSelection()</slot>
    <hints>
     <hint type="sourcelabel" >
@@ -224,7 +224,7 @@
   <connection>
    <sender>treeStations</sender>
    <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
-   <receiver>StationsDialog</receiver>
+   <receiver>LastcastStationsDialog</receiver>
    <slot>selectStation()</slot>
    <hints>
     <hint type="sourcelabel" >
