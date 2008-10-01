@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Komodo Project File - DO NOT EDIT -->
+<project id="7a1c4b96-c548-4b21-b818-22cac02aec56" kpf_version="4" name="lastcast.kpf">
+<preference-set idref="7a1c4b96-c548-4b21-b818-22cac02aec56">
+  <boolean id="import_live">1</boolean>
+</preference-set>
+</project>
