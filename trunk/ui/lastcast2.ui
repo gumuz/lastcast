@@ -1,0 +1,633 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>356</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>LastCast v0.1</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="lastcast.qrc" >
+    <normaloff>:/ui/resources/ui/transmit_blue.png</normaloff>:/ui/resources/ui/transmit_blue.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QGroupBox" name="groupBox" >
+    <property name="geometry" >
+     <rect>
+      <x>-5</x>
+      <y>0</y>
+      <width>535</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet" >
+     <string notr="true" >background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="title" >
+     <string/>
+    </property>
+    <widget class="QLabel" name="label_4" >
+     <property name="geometry" >
+      <rect>
+       <x>5</x>
+       <y>10</y>
+       <width>206</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <family>Consolas</family>
+       <pointsize>31</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground" >
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet" >
+      <string notr="true" >background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap resource="lastcast.qrc" >:/ui/resources/ui/lastcast.png</pixmap>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QSlider" name="slideVolume" >
+    <property name="geometry" >
+     <rect>
+      <x>35</x>
+      <y>195</y>
+      <width>315</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip" >
+     <string>volume</string>
+    </property>
+    <property name="orientation" >
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2" >
+    <property name="geometry" >
+     <rect>
+      <x>-5</x>
+      <y>70</y>
+      <width>380</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground" >
+     <bool>false</bool>
+    </property>
+    <property name="title" >
+     <string/>
+    </property>
+    <property name="flat" >
+     <bool>true</bool>
+    </property>
+    <widget class="QToolButton" name="btnPlay" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>5</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Play</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/control_play_blue.png</normaloff>:/ui/resources/ui/control_play_blue.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnStop" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>55</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Stop</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/control_stop_blue.png</normaloff>:/ui/resources/ui/control_stop_blue.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnStations" >
+     <property name="geometry" >
+      <rect>
+       <x>255</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Stations</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnBan" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>205</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Ban</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/bomb.png</normaloff>:/ui/resources/ui/bomb.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnRecord" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>105</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Record</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/stop.png</normaloff>:/ui/resources/ui/stop.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnLove" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>155</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Love</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/heart.png</normaloff>:/ui/resources/ui/heart.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnSettings" >
+     <property name="enabled" >
+      <bool>true</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>305</x>
+       <y>5</y>
+       <width>50</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string>Settings</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/wrench.png</normaloff>:/ui/resources/ui/wrench.png</iconset>
+     </property>
+     <property name="iconSize" >
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolButtonStyle" >
+      <enum>Qt::ToolButtonTextUnderIcon</enum>
+     </property>
+     <property name="autoRaise" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="title" >
+    <property name="geometry" >
+     <rect>
+      <x>35</x>
+      <y>135</y>
+      <width>314</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font" >
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet" >
+     <string notr="true" >background-color: rgb(199, 199, 199);</string>
+    </property>
+    <property name="text" >
+     <string/>
+    </property>
+    <property name="readOnly" >
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label" >
+    <property name="geometry" >
+     <rect>
+      <x>11</x>
+      <y>140</y>
+      <width>18</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text" >
+     <string/>
+    </property>
+    <property name="pixmap" >
+     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/music.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>20</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="toolTip" >
+     <string>volume</string>
+    </property>
+    <property name="text" >
+     <string/>
+    </property>
+    <property name="pixmap" >
+     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/sound.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2" >
+    <property name="geometry" >
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>15</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="toolTip" >
+     <string>station</string>
+    </property>
+    <property name="text" >
+     <string/>
+    </property>
+    <property name="pixmap" >
+     <pixmap resource="lastcast.qrc" >:/ui/resources/ui/transmit.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editStation" >
+    <property name="geometry" >
+     <rect>
+      <x>35</x>
+      <y>165</y>
+      <width>314</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip" >
+     <string>station</string>
+    </property>
+    <property name="styleSheet" >
+     <string notr="true" >background-color: rgb(199, 199, 199);</string>
+    </property>
+    <property name="readOnly" >
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar" >
+   <property name="sizeGripEnabled" >
+    <bool>false</bool>
+   </property>
+  </widget>
+  <action name="actionPlay" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/control_play_blue.png</normaloff>:/ui/resources/ui/control_play_blue.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionStop" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/control_stop_blue.png</normaloff>:/ui/resources/ui/control_stop_blue.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Stop</string>
+   </property>
+  </action>
+  <action name="actionRecord" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/stop.png</normaloff>:/ui/resources/ui/stop.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Record</string>
+   </property>
+  </action>
+  <action name="actionLove" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/heart.png</normaloff>:/ui/resources/ui/heart.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Love</string>
+   </property>
+  </action>
+  <action name="actionBan" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/bomb.png</normaloff>:/ui/resources/ui/bomb.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Ban</string>
+   </property>
+  </action>
+  <action name="actionStations" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Stations</string>
+   </property>
+  </action>
+  <action name="actionSettings" >
+   <property name="icon" >
+    <iconset resource="lastcast.qrc" >
+     <normaloff>:/ui/resources/ui/wrench.png</normaloff>:/ui/resources/ui/wrench.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Settings</string>
+   </property>
+  </action>
+ </widget>
+ <includes/>
+ <resources>
+  <include location="lastcast.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>play()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>23</x>
+     <y>102</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-31</x>
+     <y>97</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>76</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-11</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnRecord</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>record()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>129</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-21</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLove</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>love()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>182</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>477</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBan</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>ban()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>244</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>483</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStations</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showStations()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>270</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>438</x>
+     <y>164</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnSettings</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showSettings()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>331</x>
+     <y>97</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>443</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX" >
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY" >
+   <number>5</number>
+  </property>
+  <property name="gridSnapX" >
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY" >
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible" >
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>play()</slot>
+  <slot>stop()</slot>
+  <slot>record()</slot>
+  <slot>love()</slot>
+  <slot>ban()</slot>
+  <slot>showStations()</slot>
+  <slot>showSettings()</slot>
+  <slot>volumeChanged()</slot>
+ </slots>
+</ui>
