@@ -417,6 +417,13 @@
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusBar" >
+   <property name="autoFillBackground" >
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet" >
+    <string notr="true" >background-color: rgb(158, 158, 158);
+color: rgb(230, 230, 230);</string>
+   </property>
    <property name="sizeGripEnabled" >
     <bool>false</bool>
    </property>

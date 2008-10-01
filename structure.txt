@@ -1,0 +1,8 @@
+lastcast.py  # main app
+ ui/lastcast_main.ui # mainwindow ui-file
+ ui/lascast_main_ui.py # mainwindow compiled ui-file
+ ui/lascast_main.py # mainwindow wrapper
+
+ ui/lastcast_stations.ui # stations ui-file
+ ui/lastcast_stations_ui.py # stations compiled ui-file
+ ui/lastcast_stations.py # stations wrapper
