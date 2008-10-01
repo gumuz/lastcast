@@ -1,0 +1,538 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>409</width>
+    <height>336</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>LastSoma</string>
+  </property>
+  <property name="windowIcon" >
+   <iconset resource="lastcast.qrc" >
+    <normaloff>:/ui/resources/ui/transmit_blue.png</normaloff>:/ui/resources/ui/transmit_blue.png</iconset>
+  </property>
+  <property name="styleSheet" >
+   <string notr="true" />
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <widget class="QGroupBox" name="groupBox" >
+    <property name="geometry" >
+     <rect>
+      <x>-5</x>
+      <y>0</y>
+      <width>440</width>
+      <height>365</height>
+     </rect>
+    </property>
+    <property name="title" >
+     <string/>
+    </property>
+    <property name="flat" >
+     <bool>false</bool>
+    </property>
+    <property name="checkable" >
+     <bool>false</bool>
+    </property>
+    <widget class="QLabel" name="label_2" >
+     <property name="geometry" >
+      <rect>
+       <x>10</x>
+       <y>8</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Current song playing</string>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap resource="lastcast.qrc" >:/ui/resources/ui/music.png</pixmap>
+     </property>
+     <property name="scaledContents" >
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="editTitle" >
+     <property name="geometry" >
+      <rect>
+       <x>95</x>
+       <y>5</y>
+       <width>315</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="font" >
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip" >
+      <string>Current song playing</string>
+     </property>
+     <property name="styleSheet" >
+      <string notr="true" >background-color: rgb(232, 232, 232);</string>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="frame" >
+      <bool>true</bool>
+     </property>
+     <property name="readOnly" >
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSlider" name="slideVolume" >
+     <property name="geometry" >
+      <rect>
+       <x>95</x>
+       <y>50</y>
+       <width>315</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:8pt;">Volume&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+     </property>
+     <property name="maximum" >
+      <number>64512</number>
+     </property>
+     <property name="pageStep" >
+      <number>8192</number>
+     </property>
+     <property name="value" >
+      <number>32768</number>
+     </property>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3" >
+     <property name="geometry" >
+      <rect>
+       <x>10</x>
+       <y>49</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap resource="lastcast.qrc" >:/ui/resources/ui/sound.png</pixmap>
+     </property>
+     <property name="scaledContents" >
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnPlay" >
+     <property name="geometry" >
+      <rect>
+       <x>35</x>
+       <y>47</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Play</string>
+     </property>
+     <property name="text" >
+      <string>...</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/control_play_blue.png</normaloff>:/ui/resources/ui/control_play_blue.png</iconset>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnStop" >
+     <property name="enabled" >
+      <bool>false</bool>
+     </property>
+     <property name="geometry" >
+      <rect>
+       <x>65</x>
+       <y>47</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Stop</string>
+     </property>
+     <property name="text" >
+      <string>...</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/control_stop_blue.png</normaloff>:/ui/resources/ui/control_stop_blue.png</iconset>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnLove" >
+     <property name="geometry" >
+      <rect>
+       <x>35</x>
+       <y>5</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Love this song</string>
+     </property>
+     <property name="text" >
+      <string>...</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/heart.png</normaloff>:/ui/resources/ui/heart.png</iconset>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="btnBan" >
+     <property name="geometry" >
+      <rect>
+       <x>65</x>
+       <y>5</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Ban this song</string>
+     </property>
+     <property name="text" >
+      <string>...</string>
+     </property>
+     <property name="icon" >
+      <iconset resource="lastcast.qrc" >
+       <normaloff>:/ui/resources/ui/bomb.png</normaloff>:/ui/resources/ui/bomb.png</iconset>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5" >
+     <property name="geometry" >
+      <rect>
+       <x>140</x>
+       <y>85</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="toolTip" >
+      <string>Track history</string>
+     </property>
+     <property name="text" >
+      <string/>
+     </property>
+     <property name="pixmap" >
+      <pixmap>:/lastsomaui/img/table.png</pixmap>
+     </property>
+     <property name="scaledContents" >
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tab_3" >
+     <property name="geometry" >
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>401</width>
+       <height>246</height>
+      </rect>
+     </property>
+     <property name="tabPosition" >
+      <enum>QTabWidget::South</enum>
+     </property>
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab" >
+      <attribute name="title" >
+       <string>Stations</string>
+      </attribute>
+      <attribute name="icon" >
+       <iconset resource="lastcast.qrc" >
+        <normaloff>:/ui/resources/ui/transmit.png</normaloff>:/ui/resources/ui/transmit.png</iconset>
+      </attribute>
+      <widget class="QTreeWidget" name="treeStations" >
+       <property name="geometry" >
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>396</width>
+         <height>216</height>
+        </rect>
+       </property>
+       <property name="frameShape" >
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy" >
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+       <property name="rootIsDecorated" >
+        <bool>false</bool>
+       </property>
+       <property name="sortingEnabled" >
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text" >
+         <string>Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text" >
+         <string>Hosts</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2" >
+      <attribute name="title" >
+       <string>Tab 2</string>
+      </attribute>
+      <widget class="QTreeWidget" name="treeTrackHistory" >
+       <property name="geometry" >
+        <rect>
+         <x>10</x>
+         <y>5</y>
+         <width>396</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="toolTip" >
+        <string>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'Tahoma'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">&lt;span style=" font-size:8pt;">Track history&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+       </property>
+       <property name="alternatingRowColors" >
+        <bool>true</bool>
+       </property>
+       <property name="rootIsDecorated" >
+        <bool>false</bool>
+       </property>
+       <property name="sortingEnabled" >
+        <bool>false</bool>
+       </property>
+       <column>
+        <property name="text" >
+         <string>Date/time</string>
+        </property>
+       </column>
+       <column>
+        <property name="text" >
+         <string>Station</string>
+        </property>
+       </column>
+       <column>
+        <property name="text" >
+         <string>Track</string>
+        </property>
+       </column>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <action name="actionGeneral_settings" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>../../lastsoma/img/cog.png</normaloff>../../lastsoma/img/cog.png</iconset>
+   </property>
+   <property name="text" >
+    <string>General Settings</string>
+   </property>
+  </action>
+  <action name="actionLast_fm_settings" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>../../lastsoma/img/wrench.png</normaloff>../../lastsoma/img/wrench.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Last.fm Settings</string>
+   </property>
+  </action>
+  <action name="actionLastsoma_help" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>../../lastsoma/img/book_open.png</normaloff>../../lastsoma/img/book_open.png</iconset>
+   </property>
+   <property name="text" >
+    <string>Lastsoma help</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>../../lastsoma/img/information.png</normaloff>../../lastsoma/img/information.png</iconset>
+   </property>
+   <property name="text" >
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSomafm_Log" >
+   <property name="text" >
+    <string>Somafm Log</string>
+   </property>
+  </action>
+  <action name="actionLast_fm_Log" >
+   <property name="text" >
+    <string>Last.fm Log</string>
+   </property>
+  </action>
+  <action name="actionDebug_Log" >
+   <property name="text" >
+    <string>Debug Log</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>editTitle</tabstop>
+  <tabstop>btnLove</tabstop>
+  <tabstop>btnBan</tabstop>
+  <tabstop>btnPlay</tabstop>
+  <tabstop>btnStop</tabstop>
+  <tabstop>slideVolume</tabstop>
+ </tabstops>
+ <resources>
+  <include location="lastcast.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>btnPlay</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>play()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>187</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>187</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnBan</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>songBanned()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>395</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>394</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slideVolume</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>volumeChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>250</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>252</x>
+     <y>190</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnLove</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>songLoved()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>362</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>361</x>
+     <y>185</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>stop()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>213</x>
+     <y>138</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>212</x>
+     <y>192</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeStations</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectStream()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>90</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>-14</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX" >
+   <number>5</number>
+  </property>
+  <property name="gridDeltaY" >
+   <number>5</number>
+  </property>
+  <property name="gridSnapX" >
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY" >
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible" >
+   <bool>true</bool>
+  </property>
+ </designerdata>
+ <slots>
+  <slot>selectStream()</slot>
+  <slot>songLoved()</slot>
+  <slot>songBanned()</slot>
+  <slot>play()</slot>
+  <slot>stop()</slot>
+  <slot>volumeChanged(int)</slot>
+ </slots>
+</ui>
