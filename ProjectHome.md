@@ -1,0 +1,1 @@
+A simple, but useful shoutcast station player, with the ability to detect metadata. This metadata can be used either to record to an mp3 file and set the IDv3 tags or scrobble the sog at last.fm.
